@@ -1,0 +1,11 @@
+package courseswithinstructors;
+
+
+import org.springframework.data.repository.CrudRepository;
+
+
+public interface InstructorRepository extends CrudRepository<Instructor, Long> {
+
+//	    Set<Instructor> findCourseName(String courseName);
+
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Instructor</title>
+</head>
+
+<body>
+
+	<header>
+		<h1> Instructor Information </h1>
+	</header>
+
+	
+		<h1 th:text="${instructor.lastName}"></h1>
+	<ul>
+		
+		<li th:each="courseTopic: ${instructor.courseTopics}" th:text="${courseTopic.name}"> <!-- option 1 -->
+		<!-- <a th:href="@{/course(id=${course.id})}" th:text="${course.name}"></a> (don't use this if I use option 1-->
+		
+		<!-- option 2:
+		<li th:each="course: ${instructor.courseTopics}">
+        <a th:href="@{/course(id=${course.id})}" th:text="${course.name}"></a> -->
+		</li>
+	</ul>
+
+</body>
+</html>
